@@ -1,0 +1,247 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Manrope', sans-serif;
+  display: flex;
+  justify-content: center;
+  background-image: url("images/bg-pattern.svg");
+  background-repeat: no-repeat;
+}
+
+/* Main*/
+.container{
+  max-width: 1400px;
+}
+
+
+/*Header*/
+header{
+  margin-top: 70px;
+  padding: 50px 0;
+  text-align: center;
+  background-image: url("images/pattern-circles.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+header h1{
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: hsl(227, 35%, 25%);
+}
+header p{
+  font-size: 15px;
+}
+
+ /* Container*/
+.card-container{
+  background-color: hsl(0, 0%, 100%);
+  padding: 50px 30px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 15px hsl(227, 25%, 85%);
+  font-size: 15px;
+  color: hsl(225, 20%, 60%);
+  min-width: 500px;
+  margin-top: 15px;
+}
+.views{
+  text-transform: uppercase;
+  flex: 1;
+  align-self: center;
+}
+.price{
+  flex: 2;
+  display: flex;
+  justify-content: flex-end;
+  transition: all 0.5s;
+}
+.price span{
+  display: inline-block;
+}
+.price span:first-of-type,
+.price span:first-of-type span{
+  color: hsl(227, 35%, 25%);
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 800;
+}
+.price span:last-of-type{
+  font-size: 15px;
+  align-self: center;
+  margin-left: 5px;
+}
+
+ /* Range Bar*/
+.prog-bar{
+  position: relative;
+  height: 20px;
+}
+.prog-bar input[type="range"]{
+  width: 100%;
+}
+.b-range{
+  appearance: none;
+  background-color: hsl(174, 77%, 80%);
+  height: 10px;
+  border-radius: 5px;
+  outline: none;
+}
+.b-range::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 35px;
+  height: 35px;
+  background-image: url("images/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-color: hsl(174, 86%, 45%);
+  border-radius: 50%;
+  cursor: pointer;
+}
+.b-range::-webkit-slider-thumb:hover {
+  box-shadow: 0px 0px 10px hsl(174, 86%, 45%);
+}
+
+/* Billing*/
+.monthly{
+  margin-top: 30px;
+  font-size: 13px;
+  text-align: right;
+  display: flex;
+  justify-content: flex-end;
+}
+.discount{
+  padding: 3px 5px;
+  border-radius: 5px;
+  background-color: hsl(14, 92%, 95%);
+  color: hsl(15, 100%, 70%);
+}
+.monthly span, label{
+  margin-left: 10px;
+}
+
+/* Slider*/
+.switch{
+  position: relative;
+  height: 20px;
+  width: 40px;
+  display: inline-block;
+  border-radius: 20px;
+  background-color: hsl(174, 77%, 80%);
+  cursor: pointer;
+}
+.switch input{
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.slider{
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  position: absolute;
+  background-color: white;
+  top: 2px;
+  left: -7px;
+  transition: all 0.5s;
+}
+.switch input:checked + .slider{
+  transform: translateX(18px);
+}
+
+hr{
+  border: 0.5px solid hsl(0, 0%, 96%);
+  margin: 30px 0;
+}
+
+ /* Features*/
+.feat-list{
+  display: flex;
+  justify-content: space-between;
+}
+.feat-list ul{
+  list-style-image: url("images/icon-check.svg");
+  margin-left: 20px;
+  line-height: 25px;
+}
+.feat-list button{
+  background-color: hsl(227, 35%, 25%);
+  color: white;
+  border: none;
+  width: 180px;
+  height: 45px;
+  border-radius: 22px;
+  cursor: pointer;
+  outline: none;
+  align-self: center;
+  font-size: 15px;
+}
+.feat-list button:hover{
+  background-color: hsl(174, 86%, 45%);
+  color: hsl(227, 35%, 25%);
+}
+
+ /* Responsiveness*/
+@media (max-width: 600px) {
+  .container {
+    min-width: 375px;
+  }
+  header {
+    margin-top: 70px;
+  }
+  .card-container{
+    min-width: 375px;
+    padding: 50px 30px;
+    margin-bottom: 50px;
+  }
+ .price span {
+    display: inline-block;
+  }
+  .price span:first-of-type,
+  .price span:first-of-type span {
+    color: hsl(227, 35%, 25%);
+    font-size: 30px;
+    line-height: 30px;
+  }
+  .feat-list {
+    flex-direction: column;
+  }
+  .feat-list ul {
+    align-self: center;
+  }
+  .feat-list button {
+    margin-top: 30px;
+  }
+  @media (max-width: 375px) {
+    .container {
+      min-width: 275px;
+    }
+    header {
+      margin-top: 60px;
+    }
+    .card-container{
+      min-width: 275px;
+      padding: 40px 20px;
+      margin-bottom: 40px;
+    }
+   .price span {
+      display: inline-block;
+    }
+    .price span:first-of-type,
+    .price span:first-of-type span {
+      color: hsl(227, 35%, 25%);
+      font-size: 20px;
+      line-height: 20px;
+    }
+    .feat-list {
+      flex-direction: column;
+    }
+    .feat-list ul {
+      align-self: center;
+    }
+    .feat-list button {
+      margin-top: 20px;
+    }
