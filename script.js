@@ -1,4 +1,4 @@
-// assigning class to variable
+// assigning class name to a variable
 let cBox = document.querySelector(".switch input"),
     dur = document.querySelector(".month"),
     price = document.querySelector(".pricef"),
